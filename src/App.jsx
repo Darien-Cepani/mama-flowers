@@ -38,7 +38,8 @@ const BRAND = {
   accent: "#C4286E",
   accentDeep: "#9C1E55",
   ink: "#2A0E1C",
-  coords: [41.3267, 19.8155]
+  coords: [41.3219375, 19.8099375],
+  mapsUrl: "https://maps.app.goo.gl/XoBsiWnox1uS868Y6"
 };
 
 // Graceful fallback when a remote (Unsplash) image fails to load, so cards never
@@ -456,10 +457,7 @@ export default function App() {
 
   // Open native maps navigation to the store (Apple Maps on Apple devices, Google Maps elsewhere)
   const openDirections = () => {
-    const [lat, lng] = BRAND.coords;
-    const isApple = typeof navigator !== 'undefined' && /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
-    const url = isApple ? `https://maps.apple.com/?daddr=${lat},${lng}` : `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
-    window.open(url, '_blank', 'noopener');
+    window.open(BRAND.mapsUrl, '_blank', 'noopener');
   };
   const CATEGORIES = ["all", "bouquets", "roses", "arrangements", "weddings"];
   const NAV_CATEGORIES = ["bouquets", "roses", "arrangements", "weddings"];
@@ -1320,8 +1318,8 @@ export default function App() {
                 <div>
                   <h4 className="text-xs font-display font-semibold uppercase tracking-widest text-brand-deep">{t.visit.addressLabel}</h4>
                   <p className="text-base text-brand-dark mt-2.5 font-display font-light leading-relaxed">
-                    Përballë Ish-Cineposta<br />
-                    Tirana 1001, Albania
+                    Bulevardi Bajram Curri<br />
+                    Ish Merkata, Tiranë 1019
                   </p>
                   <p className="text-sm text-brand-dark/50 mt-1 font-sans font-light">{t.visit.addressNote}</p>
                 </div>
@@ -1425,7 +1423,7 @@ export default function App() {
                 </a>
                 <span className="flex items-center gap-3 text-base text-gray-300 font-light font-sans">
                   <span className="flex items-center justify-center w-10 h-10 border border-white/15 shrink-0"><MapPin className="w-4 h-4 text-brand-gold" /></span>
-                  Ish-Cineposta, Tirana
+                  Bulevardi Bajram Curri, Tiranë
                 </span>
               </div>
             </div>
