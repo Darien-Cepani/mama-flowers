@@ -58,6 +58,7 @@ const LANG = {
   en: {
     tagline: "FLOWERS & DECOR",
     categories: { all: "All", bouquets: "Bouquets", roses: "Roses", arrangements: "Arrangements", weddings: "Weddings" },
+    marquee: ["Fresh Daily", "Hand-Tied", "Roses", "Peonies", "Weddings", "Bespoke", "Same-Day Delivery", "Tirana"],
     nav: { browse: "Browse Flowers", book: "Order Flowers" },
     hero: {
       eyebrow: "Fresh Blooms, Hand-Tied Daily in Tirana",
@@ -161,6 +162,7 @@ const LANG = {
   sq: {
     tagline: "LULE & DEKOR",
     categories: { all: "Të Gjitha", bouquets: "Buqeta", roses: "Trëndafila", arrangements: "Kompozime", weddings: "Dasma" },
+    marquee: ["Të Freskëta Çdo Ditë", "Punuar me Dorë", "Trëndafila", "Bozhure", "Dasma", "Sipas Porosisë", "Dërgesë Brenda Ditës", "Tiranë"],
     nav: { browse: "Shfleto Lulet", book: "Porosit Lule" },
     hero: {
       eyebrow: "Lule të Freskëta, të Punuara me Dorë çdo Ditë në Tiranë",
@@ -1084,14 +1086,14 @@ export default function App() {
           <div className="flex animate-infinite-scroll gap-10 sm:gap-20 text-base sm:text-lg md:text-xl tracking-[0.4em] uppercase font-display font-light items-center">
             {[0, 1].map((dup) => (
               <React.Fragment key={dup}>
-                <span className="font-display font-semibold tracking-[0.45em]">Fresh Daily</span> <span className="text-brand-deep opacity-60">✦</span>
-                <span className="font-display italic font-medium tracking-[0.3em]">Hand-Tied</span> <span className="text-brand-deep opacity-60">✦</span>
-                <span className="font-display font-bold tracking-[0.25em]">Roses</span> <span className="text-brand-deep opacity-60">✦</span>
-                <span className="font-display font-normal uppercase tracking-[0.4em]">Peonies</span> <span className="text-brand-deep opacity-60">✦</span>
-                <span className="font-sans font-normal tracking-[0.5em] text-brand-dark/90">Weddings</span> <span className="text-brand-deep opacity-60">✦</span>
-                <span className="font-display italic font-semibold tracking-[0.3em] text-brand-deep">Bespoke</span> <span className="text-brand-deep opacity-60">✦</span>
-                <span className="font-display font-black tracking-[0.15em]">Same-Day Delivery</span> <span className="text-brand-deep opacity-60">✦</span>
-                <span className="font-sans tracking-[0.45em] font-normal italic text-brand-dark/90">Tirana</span> <span className="text-brand-deep opacity-60">✦</span>
+                <span className="font-display font-semibold tracking-[0.45em]">{t.marquee[0]}</span> <span className="text-brand-deep opacity-60">✦</span>
+                <span className="font-display italic font-medium tracking-[0.3em]">{t.marquee[1]}</span> <span className="text-brand-deep opacity-60">✦</span>
+                <span className="font-display font-bold tracking-[0.25em]">{t.marquee[2]}</span> <span className="text-brand-deep opacity-60">✦</span>
+                <span className="font-display font-normal uppercase tracking-[0.4em]">{t.marquee[3]}</span> <span className="text-brand-deep opacity-60">✦</span>
+                <span className="font-sans font-normal tracking-[0.5em] text-brand-dark/90">{t.marquee[4]}</span> <span className="text-brand-deep opacity-60">✦</span>
+                <span className="font-display italic font-semibold tracking-[0.3em] text-brand-deep">{t.marquee[5]}</span> <span className="text-brand-deep opacity-60">✦</span>
+                <span className="font-display font-black tracking-[0.15em]">{t.marquee[6]}</span> <span className="text-brand-deep opacity-60">✦</span>
+                <span className="font-sans tracking-[0.45em] font-normal italic text-brand-dark/90">{t.marquee[7]}</span> <span className="text-brand-deep opacity-60">✦</span>
               </React.Fragment>
             ))}
           </div>
