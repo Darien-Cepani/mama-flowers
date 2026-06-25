@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="260" viewBox="0 0 520 260" role="img" aria-label="Mama Flowers — Flowers & Decor · Tirana">
+  <rect width="520" height="260" fill="#FBF0F4"/>
+
+  <!-- Bold modern bloom mark -->
+  <g transform="translate(260 78)">
+    <!-- petals -->
+    <g fill="#C4286E">
+      <ellipse cx="0" cy="-26" rx="13" ry="24"/>
+      <ellipse cx="0" cy="26" rx="13" ry="24"/>
+      <ellipse cx="-26" cy="0" rx="24" ry="13"/>
+      <ellipse cx="26" cy="0" rx="24" ry="13"/>
+      <ellipse cx="-18" cy="-18" rx="12" ry="22" transform="rotate(45 -18 -18)"/>
+      <ellipse cx="18" cy="18" rx="12" ry="22" transform="rotate(45 18 18)"/>
+      <ellipse cx="18" cy="-18" rx="12" ry="22" transform="rotate(-45 18 -18)"/>
+      <ellipse cx="-18" cy="18" rx="12" ry="22" transform="rotate(-45 -18 18)"/>
+    </g>
+    <!-- center detail -->
+    <circle cx="0" cy="0" r="13" fill="#9C1E55"/>
+    <circle cx="0" cy="0" r="5" fill="#FBF0F4"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="260" y="178"
+        font-family="Montserrat, 'Segoe UI', Arial, sans-serif"
+        font-size="62" font-weight="700" letter-spacing="18"
+        text-anchor="middle" fill="#2A0E1C">MAMA</text>
+
+  <!-- Hairline -->
+  <line x1="150" y1="206" x2="370" y2="206" stroke="#9C1E55" stroke-width="1"/>
+
+  <!-- Tagline -->
+  <text x="260" y="228"
+        font-family="Montserrat, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="500" letter-spacing="6"
+        text-anchor="middle" fill="#9C1E55">FLOWERS &amp; DECOR · TIRANA</text>
+</svg>

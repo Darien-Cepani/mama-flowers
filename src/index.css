@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #ffffff;
+  color: #2A0E1C;
+}
+
+/* Outlined display lettering */
+.font-outline {
+  -webkit-text-stroke: 1px rgba(42, 14, 28, 0.2);
+  color: transparent;
+}
+
+.font-outline-white {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  color: transparent;
+}
+
+.font-outline-gold {
+  -webkit-text-stroke: 1px rgba(196, 40, 110, 0.18);
+  color: transparent;
+}
+
+/* Infinite brand scrolling marquee */
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 40s linear infinite;
+}
+
+/* Custom scrollbar to match the blush palette */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FBF0F4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4286E;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9C1E55;
+}
+
+/* Hover scale helper */
+.hover-scale {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Reveal overlays */
+.reveal-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.reveal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FBF0F4;
+  z-index: 10;
+  transform: translateY(0);
+}
+
+/* Entry keyframes & animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Splash screen — soft rose shimmer sweeping across the wordmark */
+@keyframes loader-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+.loader-shimmer {
+  background-image: linear-gradient(100deg, #9C1E55 18%, #ffffff 42%, #ffe6f0 50%, #ffffff 58%, #9C1E55 82%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: loader-shimmer 3.4s linear infinite;
+}
+
+/* Hide scrollbar where needed (modals) */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Desaturate OpenStreetMap tiles to match the soft editorial aesthetic */
+.desaturate-map .leaflet-tile-container {
+  filter: grayscale(70%) contrast(94%) brightness(102%) sepia(10%);
+}
+
+/* Visible keyboard focus ring for accessibility */
+:focus-visible {
+  outline: 2px solid #9C1E55;
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+/* Honour reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-infinite-scroll,
+  .animate-ping,
+  .animate-bounce,
+  .animate-spin {
+    animation: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
